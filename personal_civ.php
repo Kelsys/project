@@ -1,11 +1,10 @@
+
 <?php
 require("common.php");
 if(isset($_SESSION['serNo'])){
     header('location:second_page.php');
     }
-?>
-
-<html>
+?><html>
      <head>
         <title>Officers | Leave application</title>
         <link rel="icon" href="img/IAF-Logo Png.png" type="image/jpg">
@@ -21,7 +20,7 @@ if(isset($_SESSION['serNo'])){
             <div class="container" id="head">
                 <div class="navbar-header">
                     <div class="logo">
-                        <img src="img/title.png" alt="Logo" class="headlogo" style="width:80px">  
+                        <img src="img/title.png" alt="Logo" class="headlogo" style="width:80px"> 
                         <a href="index.php" class="navbar-brand" style="font-family:Arial; font-weight: bold; font-size: 26px;">INDIAN AIR FORCE</a>
                     
                     </div>
@@ -29,7 +28,7 @@ if(isset($_SESSION['serNo'])){
             </div>
         </nav>
         <div class="col-md-4 col-md-offset-4">
-            <div class="panel panel-primary" style="margin-bottom: 100px">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
                             <h4>Personal Details</h4>
                     </div>
@@ -37,13 +36,7 @@ if(isset($_SESSION['serNo'])){
                        
                        <form role="form" action="signup_script.php" method="POST">
                         <div class="form-group">
-                            <h5><b>Service No.(With Sx)</b></h5> <input type="text" class="form-control" placeholder="Ex: 12345A" name="SerNo" pattern="[0-9]{5}+-[A-Z]{1}" required maxlength="7" minlength="7">
-                        </div>
-                           <div class="form-group">
-                           <h5><b>Date of Birth</b></h5><input type="date" class="form-control" placeholder="Ex: Ram Singh" name="dob" required = "true">
-                        </div>
-                           <div class="form-group">
-                           <h5><b>Name</b></h5><input type="text" class="form-control" placeholder="Ex: Ram Singh" name="name" required = "true">
+                            <h5><b>Service No.(With Sx)</b></h5> <input type="text" class="form-control" placeholder="Ex: 12345A" name="SerNo"  required maxlength="5" >
                         </div>
                         <div class="form-group">
                                 <h5><b>Rank</b></h5>
@@ -58,7 +51,7 @@ if(isset($_SESSION['serNo'])){
                                     <option value="sl">Sqd Ldr</option>
                                     <option value="fl">Flt Lt</option>
                                     <option value="fo">Fg Offr</option>
-                                </select>
+                                  </select>
                         </div>
                         <div class="form-group">
                            <h5><b>Name</b></h5><input type="text" class="form-control" placeholder="Ex: Ram Singh" name="name" required = "true">
@@ -82,7 +75,7 @@ if(isset($_SESSION['serNo'])){
                                <h5><b>Unit</b></h5><input  type="text" class="form-control"  placeholder="Ex:112HU" name="unit" required = "true">
                            </div>
                            <div class="form-group">
-                               <h5><b>Basic Pay</b></h5>  <input  type="text" class="form-control"  placeholder="Ex:10000" name="bpay" required = "true" maxlength="6">
+                               <h5><b>Basic Pay</b></h5>  <input  type="text" class="form-control"  placeholder="Ex:10000" name="bpay" required = "true">
                            </div>
                            <div class="form-group">
                                 <h5><b>Rly Stn(Home Town)</b></h5>  <input  type="text" class="form-control"  placeholder="Ex:NDLS" name="address" required = "true">

@@ -1,4 +1,9 @@
-
+<?php
+require("common.php");
+if(isset($_SESSION['serNo'])){
+    header('location:second_page.php');
+    }
+?>
 
 <html>
      <head>
@@ -37,7 +42,7 @@
                        
                        </p><form role="form" action="login_submit.php" method="POST">
                         <div class="form-group">
-                            <h5><b>Service No.</b></h5><input type="text" class="form-control" placeholder="Ex: 123456A" name="serNo" required="" pattern="[0-9]{5}[A-Z]{1}">
+                            <h5><b>Service No.</b></h5><input type="text" class="form-control" placeholder="Ex: 123456A" name="serNo" required="">
                         </div>
                         <div class="form-group">
                             <h5><b>Date of birth</b></h5><input type="date" class="form-control" placeholder="Date of birth" name="dob" required="">
